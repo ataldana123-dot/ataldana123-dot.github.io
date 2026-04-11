@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panadería Retoño – Galletas Deliciosas</title>
+    <style>
+        /* MISMOS ESTILOS BASE QUE PANES.HTML */
+        :root { --cafe-oscuro: #5a2d0c; --cafe-claro: #8d4b20; --crema: #fff3e0; --dorado: #ffe082; --texto: #4a2c1a; --ocre: #e6caa8; --rosa-chispas: #ff8a80; --azul-chispas: #81d4fa; }
+        body { margin: 0; font-family: 'Segoe UI', sans-serif; background-color: var(--crema); 
+               background-image: radial-gradient(circle at top, var(--crema), var(--ocre)),
+               /* Patrón de puntos tipo chispas */
+               url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCIgdmlld0JveD0iMCAwIDIwIDIwIj48ZyBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiM4ZDQuYjIwIiBmaWxsLW9wYWNpdHk9IjAuMDgiPjhjaXJjbGUgY3g9IjMiIGN5PSIzIiByPSIzIi8+PGNpcmNsZSBjeD0iMTMiIGN5PSIxMyIgcj0iMyIvPjwvZz48L2c+PC9zdmc+');
+               color: var(--texto); min-height: 100vh; }
+        
+        header { padding: 40px 20px; text-align: center; background: linear-gradient(135deg, var(--cafe-oscuro), var(--cafe-claro)); color: #fff; box-shadow: 0 4px 15px rgba(0,0,0,0.3); border-bottom: 5px solid var(--rosa-chispas); position: relative; }
+        header::after { content: '🍪 🍩 🍪 🍩'; position: absolute; bottom: 10px; left: 0; width: 100%; font-size: 1.2rem; opacity: 0.7; }
+        h1 { margin: 0; font-size: 2.8rem; text-shadow: 2px 2px 4px rgba(0,0,0,0.5); }
+        nav { margin-top: 25px; }
+        nav a { margin: 0 18px; color: var(--dorado); text-decoration: none; font-weight: 700; text-transform: uppercase; font-size: 1rem; letter-spacing: 1px; }
+        nav a:hover { color: #fff; text-shadow: 0 0 15px var(--dorado); }
+        
+        h2.seccion-titulo { text-align: center; margin-top: 50px; font-size: 3rem; color: var(--cafe-oscuro); text-shadow: 1px 1px 0 #fff, 2px 2px 0 var(--cafe-claro); position: relative; display: inline-block; left: 50%; transform: translateX(-50%); }
+        h2.seccion-titulo::before, h2.seccion-titulo::after { content: ''; position: absolute; top: 50%; width: 100px; height: 2px; background: var(--cafe-claro); }
+        h2.seccion-titulo::before { left: -120px; } h2.seccion-titulo::after { right: -120px; }
+
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 40px; padding: 60px; }
+        
+        /* Tarjeta Decorada estilo Galleta */
+        .card { 
+            background: #fff; border-radius: 30px; padding: 20px; text-align: center; 
+            box-shadow: 0 15px 35px rgba(84, 45, 12, 0.15); transition: 0.5s ease; border: 3px solid #fff; position: relative; overflow: hidden;
+            /* Borde punteado extra */
+            outline: 2px dashed var(--ocre); outline-offset: -10px;
+        }
+        .card::before { content: '🍪'; position: absolute; top: -10px; right: -10px; font-size: 3rem; opacity: 0.15; transform: rotate(15deg); }
+        .card:hover { transform: translateY(-15px) scale(1.02); box-shadow: 0 25px 50px rgba(84, 45, 12, 0.3); border-color: var(--rosa-chispas); outline-color: var(--rosa-chispas); }
+        
+        .card-img-container { width: 100%; height: 220px; border-radius: 20px; overflow: hidden; margin-bottom: 20px; border: 5px solid #fff; box-shadow: 0 5px 15px rgba(0,0,0,0.1); position: relative; }
+        .card img { width: 100%; height: 100%; object-fit: cover; transition: 0.5s; }
+        .card:hover img { transform: scale(1.1) rotate(2deg); }
+
+        .card h3 { color: var(--cafe-oscuro); margin: 10px 0 10px; font-size: 1.5rem; position: relative; }
+        .card h3::after { content: '✨'; display: block; font-size: 1rem; color: var(--dorado); margin-top: 5px; }
+
+        .price-tag { 
+            background: linear-gradient(135deg, var(--rosa-chispas), #ff5252);
+            color: #fff; display: inline-block; padding: 10px 25px; border-radius: 50px; font-weight: bold; font-size: 1.2rem; 
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2); border: 2px solid #fff; transform: rotate(2deg);
+        }
+        
+        .decoracion-extra { position: fixed; font-size: 5rem; opacity: 0.04; z-index: -1; }
+    </style>
+</head>
+<body>
+    <div class="decoracion-extra" style="top: 15%; left: 8%;">🍪</div>
+    <div class="decoracion-extra" style="bottom: 20%; right: 7%;">🍩</div>
+    <div class="decoracion-extra" style="top: 60%; left: 15%;">🥣</div>
+
+    <header>
+        <h1>🌾 Panadería Retoño</h1>
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="panes.html">Panes</a>
+            <a href="galletas.html">Galletas</a>
+            <a href="lacteos.html">Lácteos</a>
+            <a href="pedidos.html">Pedidos</a>
+        </nav>
+    </header>
+    
+    <h2 class="seccion-titulo">Nuestras Galletas</h2>
+    
+    <main class="grid">
+        <div class="card">
+            <div class="card-img-container">
+                <img src="https://images.unsplash.com/photo-1599785209707-28c6bfb6b5c5">
+            </div>
+            <h3>Galleta de chocolate</h3>
+            <div class="price-tag">$600 COP</div>
+        </div>
+
+        <div class="card">
+            <div class="card-img-container">
+                <img src="https://images.unsplash.com/photo-1548365328-5c2c8b1aab9b">
+            </div>
+            <h3>Galleta chispas de colores</h3>
+            <div class="price-tag">$600 COP</div>
+        </div>
+
+    </main>
+</body>
+</html>

@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panadería Retoño – Inicio</title>
+    <style>
+        :root {
+            --cafe-oscuro: #5a2d0c;
+            --cafe-claro: #8d4b20;
+            --crema: #fff3e0;
+            --dorado: #ffe082;
+            --texto: #4a2c1a;
+            --ocre: #e6caa8;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--crema);
+            /* Fondo con textura artesanal */
+            background-image: 
+                radial-gradient(circle at top, var(--crema), var(--ocre)),
+                url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MCIgaGVpZ2h0PSI0MCIgdmlld0JveD0iMCAwIDQwIDQwIj48ZyBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiM4ZDQuYjIwIiBmaWxsLW9wYWNpdHk9IjAuMDUiPjxwYXRoIGQ9Ik0wIDBoNHY0SDBWMHptNCA0aDR2NEg0VjR6TTAgNGg0djRIMFY0em00IDBoNHY0SDRWMHptOCA4aDR2NEg4Vjh6bTQgNGg0djRINFYxMnpNOCA4aDR2NEg4Vjh6bTQgMGg0djRINFY4em0xNiAxNmY0djRINFYyNHptNCA0aDR2NEg0VjI4em0wLTRoNHY0SDRWMjR6bTQgMGg0djRINFYyNHptLTggOGg0djRINFY4em00IDRoNHY0SDRWMTJ6TTAgOGg0djRINFY4em00IDRoNHY0SDRWMTJ6TTAgMTJoNHY0SDBWMTJ6bTQgMGg0djRINFYxMnpNMjQgMGg0djRINFYwem00IDRoNHY0SDRWNHptLSA0aDR2NEg0VjB6bTQgMGg0djRINFY4em0wIDE2aDR2NEg4VjI0em00IDRoNHY0SDRWMjh6bTAtNGg0djRINFYyNHptNCAwMGg0djRINFYyNHptLTggOGg0djRINFY4em00IDRoNHY0SDRWMTJ6TTAgMjRoNHY0SDBWMjR6bTQgNGg0djRINFYyOHptMCA0aDR2NEg0VjI0em00IDBoNHY0SDRWMjR6TTAgMjh6bTQgMGg0djRINFYyOHptMCA0aDR2NEg0VjMyem00IDBoNHY0SDRWMzJ6bTggOGg0djRINFY4em00IDRoNHY0SDRWMTJ6TTggMjRoNHY0SDRWMjR6bTQgNGg0djRINFYyOHptMCA0aDR2NEg0VjI0em00IDBoNHY0SDRWMjR6TTggMjh6bTQgMGg0djRINFYyOHptMCA0aDR2NEg0VjMyem00IDBoNHY0SDRWMzJ6TTI0IDE2aDR2NEg0VjE2em00IDRoNHY0SDRWMjB6bS00IDRoNHY0SDRWMTZ6bTQgMGg0djRINFYxNnpNMjQgMjBoNHY0SDRWMjB6bTQgMGg0djRINFYyMHptMCA4aDR2NEg0VjI4em00IDRoNHY0SDRWMjh6bTAtNGg0djRINFYyNHptNCAwMGg0djRINFYyNHptLTggOGg0djRINFY4em00IDRoNHY0SDRWMTJ6TTMyIDBoNHY0SDRWMHptNCA0aDR2NEg0VjR6bTAtNGg0djRINFYwem00IDBoNHY0SDRWOHptMCAxNmY0djRINFYyNHptNCA0aDR2NEg0VjI4em0wLTRoNHY0SDRWMjR6bTQgMGg0djRINFYyNHptLTggOGg0djRINFY4em00IDRoNHY0SDRWMTJ6TTMyIDE2aDR2NEg0VjE2em00IDRoNHY0SDRWMjB6bS00IDRoNHY0SDRWMTZ6bTQgMGg0djRINFYxNnpNMzIgMjBoNHY0SDRWMjB6bTQgMGg0djRINFYyMHptMCA4aDR2NEg0VjI4em00IDRoNHY0SDRWMjh6bTAtNGg0djRINFYyNHptNCAwMGg0djRINFYyNHptLTggOGg0djRINFY4em00IDRoNHY0SDRWMTJ6TTAgMzJoNHY0SDBWMzJ6bTQgMGg0djRINFYzMnpNMCAzNmg0djRINFYzNnpNMzIgMzJoNHY0SDRWMzJ6bTQgMGg0djRINFYzMnpNMzIgMzZoNHY0SDRWMzZ6bS04IDBoNHY0SDRWMzZ6bTQtNGg0djRINFYzMnpNMTYgMzJoNHY0SDRWMzJ6bTQgMGg0djRINFYzMnpNMTYgMzZoNHY0SDRWMzZ6bTgtOGg0djRINFYyOHptNC00aDR2NEg0VjI0ek0yNCA4aDR2NEg0Vjh6bTQgMGg0djRINFY4ek0yNCAxMmg0djRINFYxMnpNMjQgNGg0djRINFY0em00IDRoNHY0SDRWNHptMC00aDR2NEg0VjB6bTQgMGg0djRINFY4em0wIDE2aDR2NEg0VjI0em00LTRoNHY0SDRWMjB6TTggMTZoNHY0SDRWMTZ6bTQgNGg0djRINFYyMHptLTggMGg0djRINFYyMHptNCA0aDR2NEg0VjI0ek00IDE2aDR2NEg0VjE2em0wLTRoNHY0SDRWMTJ6TTAgMTZoNHY0SDBWMTZ6bTQgMGg0djRINFYxNnpNOCA4aDR2NEg0Vjh6bS00IDRoNHY0SDRWOHptNCA0aDR2NEg0VjEyek0wIDEyaDR2NEg0VjEyek0yNCAzMmY0djRINFYzMnpNMzIgMjRoNHY0SDRWMjR6TTAgMjRoNHY0SDBWMjR6TTggMzJoNHY0SDRWMzJ6TTI0IDE2aDR2NEg0VjE2em00IDRoNHY0SDRWMjB6bS00IDRoNHY0SDRWMTZ6bTQgMGg0djRINFYxNnpNMjQgMjBoNHY0SDRWMjB6bTQgMGg0djRINFYyMHptMCA4aDR2NEg0VjI4em00IDRoNHY0SDRWMjh6bTAtNGg0djRINFYyNHptNCAwMGg0djRINFYyNHptLTggOGg0djRINFY4em00IDRoNHY0SDRWMTJ6Ii8+PC9nPjwvZz48L3N2Zz4=');
+            color: var(--texto);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        header {
+            width: 100%;
+            padding: 50px 0;
+            text-align: center;
+            background: linear-gradient(135deg, var(--cafe-oscuro), var(--cafe-claro));
+            color: #fff;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+            border-bottom: 8px solid var(--dorado);
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Animación de espigas flotantes en el header */
+        header::before {
+            content: '🌾';
+            position: absolute;
+            left: 10%;
+            font-size: 5rem;
+            opacity: 0.2;
+            animation: flotar 3s ease-in-out infinite;
+        }
+        header::after {
+            content: '🥖';
+            position: absolute;
+            right: 10%;
+            font-size: 5rem;
+            opacity: 0.2;
+            animation: flotar 3s ease-in-out infinite reverse;
+        }
+
+        @keyframes flotar {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+
+        h1 { 
+            margin: 0; 
+            font-size: 3.5rem; 
+            text-shadow: 3px 3px 6px rgba(0,0,0,0.5);
+            letter-spacing: 2px;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 60px 20px;
+            max-width: 800px;
+            animation: aparecer 1s ease-out;
+        }
+
+        @keyframes aparecer {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .hero h2 {
+            font-size: 2.5rem;
+            color: var(--cafe-oscuro);
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            line-height: 1.6;
+            color: var(--cafe-claro);
+            font-weight: 500;
+        }
+
+        /* Menú de categorías visual */
+        .categorias-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            width: 90%;
+            max-width: 1100px;
+            padding: 20px;
+            margin-bottom: 50px;
+        }
+
+        .cat-card {
+            background: white;
+            border-radius: 25px;
+            padding: 30px;
+            text-align: center;
+            text-decoration: none;
+            color: var(--texto);
+            box-shadow: 0 10px 25px rgba(84, 45, 12, 0.1);
+            transition: 0.4s;
+            border: 3px solid #fff;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cat-card:hover {
+            transform: translateY(-10px) scale(1.05);
+            border-color: var(--dorado);
+            box-shadow: 0 20px 40px rgba(84, 45, 12, 0.2);
+        }
+
+        .cat-card .icon {
+            font-size: 4rem;
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        .cat-card h3 {
+            margin: 0;
+            font-size: 1.8rem;
+            color: var(--cafe-oscuro);
+        }
+
+        .cat-card p {
+            margin: 10px 0 0;
+            color: #888;
+            font-size: 1rem;
+        }
+
+        /* Botón de Pedidos destacado */
+        .btn-pedidos-home {
+            background: linear-gradient(135deg, #25D366, #128C7E);
+            color: white;
+            padding: 20px 50px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.5rem;
+            box-shadow: 0 10px 30px rgba(37, 211, 102, 0.4);
+            transition: 0.3s;
+            margin-bottom: 60px;
+            border: 4px solid #fff;
+        }
+
+        .btn-pedidos-home:hover {
+            transform: scale(1.1) rotate(-1deg);
+            box-shadow: 0 15px 40px rgba(37, 211, 102, 0.6);
+        }
+
+        footer {
+            margin-top: auto;
+            width: 100%;
+            padding: 30px;
+            text-align: center;
+            background: var(--cafe-oscuro);
+            color: var(--dorado);
+            font-size: 0.9rem;
+        }
+
+        /* Trazos decorativos de fondo */
+        .sketch-decor {
+            position: fixed;
+            z-index: -1;
+            opacity: 0.05;
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="sketch-decor" style="top: 15%; left: 5%; transform: rotate(-15deg); font-size: 8rem;">🥣</div>
+    <div class="sketch-decor" style="bottom: 10%; right: 5%; transform: rotate(20deg); font-size: 10rem;">👨‍🍳</div>
+
+    <header>
+        <h1>🌾 Panadería Retoño</h1>
+        <p style="margin-top: 10px; font-weight: bold; color: var(--dorado);">Sabor Artesanal en Cada Mordida</p>
+    </header>
+
+    <main class="hero">
+        <h2>Bienvenido a lo Natural</h2>
+        <p>En Panadería Retoño, horneamos con amor y tradición. Explora nuestro catálogo de productos frescos hechos a mano diariamente.</p>
+    </main>
+
+    <div class="categorias-container">
+        <a href="panes.html" class="cat-card">
+            <span class="icon">🥖</span>
+            <h3>Nuestros Panes</h3>
+            <p>Artesanales, calientes y crujientes.</p>
+        </a>
+
+        <a href="galletas.html" class="cat-card">
+            <span class="icon">🍪</span>
+            <h3>Galletas</h3>
+            <p>Dulces momentos para compartir.</p>
+        </a>
+
+        <a href="lacteos.html" class="cat-card">
+            <span class="icon">🥛</span>
+            <h3>Lácteos</h3>
+            <p>Frescura directa a tu mesa.</p>
+        </a>
+
+        <a href="ubicacion.html" class="cat-card">
+            <span class="icon">📍</span>
+            <h3>Ubicación</h3>
+            <p>¿Quieres comprar físicamente? No te preocupes, aqui tienes nuestra dirección.</p>
+        </a>
+    </div>
+
+    <a href="pedidos.html" class="btn-pedidos-home">
+        🛒 Haz tu Pedido Ahora
+    </a>
+
+    <footer>
+        &copy; 2026 Panadería Retoño - Calidad y Tradición
+    </footer>
+
+</body>
+</html>

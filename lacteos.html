@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lácteos – Panadería Retoño</title>
+    <style>
+        :root {
+            --cafe-oscuro: #5a2d0c;
+            --cafe-claro: #8d4b20;
+            --crema: #fff3e0;
+            --dorado: #ffe082;
+            --texto: #4a2c1a;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(180deg, var(--crema), #e0b27a);
+            color: var(--texto);
+            min-height: 100vh;
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--cafe-oscuro), var(--cafe-claro));
+            color: white;
+            text-align: center;
+            padding: 25px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+        }
+
+        nav {
+            margin-top: 15px;
+        }
+
+        nav a {
+            color: var(--dorado);
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+            color: #fff;
+        }
+
+        h2 {
+            text-align: center;
+            margin-top: 40px;
+            font-size: 2.2rem;
+            color: var(--cafe-oscuro);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            padding: 40px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .card {
+            background: white;
+            border-radius: 20px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+            border: 2px solid transparent;
+            animation: entrada 0.8s ease-out;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(90, 45, 12, 0.2);
+            border-color: var(--cafe-claro);
+            cursor: url("https://cdn-icons-png.flaticon.com/512/3050/3050158.png") 16 16, pointer; /* Cursor de leche/queso */
+        }
+
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 15px;
+            margin-bottom: 15px;
+            background-color: #f9f9f9;
+        }
+
+        .card h3 {
+            margin: 10px 0;
+            color: var(--cafe-oscuro);
+            font-size: 1.4rem;
+        }
+
+        .price {
+            background: var(--cafe-oscuro);
+            color: var(--dorado);
+            display: inline-block;
+            padding: 8px 20px;
+            border-radius: 50px;
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+
+        @keyframes entrada {
+            from { opacity: 0; transform: scale(0.9); }
+            to { opacity: 1; transform: scale(1); }
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px;
+            color: var(--cafe-claro);
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>🥛 Panadería Retoño</h1>
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="panes.html">Panes</a>
+            <a href="galletas.html">Galletas</a>
+            <a href="pedidos.html">Pedidos</a>
+        </nav>
+    </header>
+
+    <h2>Lácteos Frescos</h2>
+
+    <main class="grid">
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1550583724-1d552049521b?auto=format&fit=crop&q=80&w=400" alt="Leche">
+            <h3>Leche Alquería Mediana</h3>
+            <div class="price">$4.000 COP</div>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1563636619-e91000f21fca?auto=format&fit=crop&q=80&w=400" alt="Leche Grande">
+            <h3>Leche Alquería Grande</h3>
+            <div class="price">$6.000 COP</div>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1528498033373-3c6c08e93d79?auto=format&fit=crop&q=80&w=400" alt="Queso">
+            <h3>Queso Cuadrado</h3>
+            <div class="price">$5.000 COP</div>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1486297678162-ad2a19b05830?auto=format&fit=crop&q=80&w=400" alt="Queso Redondo">
+            <h3>Queso Redondo</h3>
+            <div class="price">$5.500 COP</div>
+        </div>
+    </main>
+
+    <footer>
+        Tradición y frescura en cada producto.
+    </footer>
+
+</body>
+</html>
