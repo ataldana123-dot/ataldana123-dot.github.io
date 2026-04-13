@@ -6,9 +6,9 @@
     <title>Realizar Pedido – Panadería Retoño</title>
     <style>
         /* MISMOS ESTILOS BASE Y FONDO DE PANES.HTML */
-        :root { --cafe-oscuro: #5a2d0c; --cafe-claro: #8d4b20; --crema: #fff3e0; --dorado: #ffe082; --texto: #4a2c1a; --ocre: #e6caa8; --verde: #25D366; }
+        :root { --cafe-oscuro: #5a2d0c; --cafe-claro: #8d4b20; --crema: #fff3e0; --dorado: #ffe082; --texto: #4a2c1a; --ocre: #e6caa8; --verde: #25D366; --rojo: #e74c3c; }
         body { margin: 0; font-family: 'Segoe UI', sans-serif; background-color: var(--crema); 
-               background-image: radial-gradient(circle at top, var(--crema), var(--ocre)), url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MCIgaGVpZ2h0PSI0MCIgdmlld0JveD0iMCAwIDQwIDQwIj48ZyBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiM4ZDQuYjIwIiBmaWxsLW9wYWNpdHk9IjAuMDUiPjxwYXRoIGQ9Ik0wIDBoNHY0SDBWMHptNCA0aDR2NEg0VjR6TTAgNGg0djRIMFY0em00IDBoNHY0SDRWMHptOCA4aDR2NEg4Vjh6bTQgNGg0djRINFYxMnpNOCA4aDR2NEg4Vjh6bTQgMGg0djRINFY4em0xNiAxNmY0djRINFYyNHptNCA0aDR2NEg0VjI4em0wLTRoNHY0SDRWMjR6bTQgMGg0djRINFYyNHptLTggOGg0djRINFY4em00IDRoNHY0SDRWMTJ6TTAgOGg0djRINFY4em00IDRoNHY0SDRWMTJ6TTAgMTJoNHY0SDBWMTJ6bTQgMGg0djRINFYxMnpNMjQgMGg0djRINFYwem00IDRoNHY0SDRWNHptLSA0aDR2NEg0VjB6bTQgMGg0djRINFY4em0wIDE2aDR2NEg4VjI0em00IDRoNHY0SDRWMjh6bTAtNGg0djRINFYyNHptNCAwMGg0djRINFYyNHptLTggOGg0djRINFY4em00IDRoNHY0SDRWMTJ6TTAgMjRoNHY0SDBWMjR6bTQgNGg0djRINFYyOHptMCA0aDR2NEg0VjI0em00IDBoNHY0SDRWMjR6TTAgMjh6bTQgMGg0djRINFYyOHptMCA0aDR2NEg0VjMyem00IDBoNHY0SDRWMzJ6bTggOGg0djRINFY4em00IDRoNHY0SDRWMTJ6TTggMjRoNHY0SDRWMjR6bTQgNGg0djRINFYyOHptMCA0aDR2NEg0VjI0em00IDBoNHY0SDRWMjR6TTggMjh6bTQgMGg0djRINFYyOHptMCA0aDR2NEg0VjMyem00IDBoNHY0SDRWMzJ6TTI0IDE2aDR2NEg0VjE2em00IDRoNHY0SDRWMjB6bS00IDRoNHY0SDRWMTZ6bTQgMGg0djRINFYxNnpNMjQgMjBoNHY0SDRWMjB6bTQgMGg0djRINFYyOHptMCA4aDR2NEg0VjI4em00IDRoNHY0SDRWMjh6bTAtNGg0djRINFYyNHptNCAwMGg0djRINFYyNHptLTggOGg0djRINFY4em00IDRoNHY0SDRWMTJ6TTMyIDBoNHY0SDRWMzJ6bTQgMGg0djRINFY0em0wLTRoNHY0SDRWMHptNCAwMGg0djRINFY4em0wIDE2aDR2NEg0VjI0em00IDRoNHY0SDRWMjh6bTAtNGg0djRINFYyNHptNCAwMGg0djRINFYyNHptLTggOGg0djRINFY4em00IDRoNHY0SDRWMTJ6TTMyIDE2aDR2NEg0VjE2em00IDRoNHY0SDRWMjB6bS00IDRoNHY0SDRWMTZ6bTQgMGg0djRINFYxNnpNMzIgMjBoNHY0SDRWMjB6bTQgMGg0djRINFYyMHptMCA4aDR2NEg0VjI4em00IDRoNHY0SDRWMjh6bTAtNGg0djRINFYyNHptNCAwMGg0djRINFYyNHptLTggOGg0djRINFY4em00IDRoNHY0SDRWMTJ6TTAgMzJoNHY0SDBWMzJ6bTQgMGg0djRINFYzMnpNMCAzNmg0djRINFYzNnpNMzIgMzJoNHY0SDRWMzJ6bTQgMGg0djRINFYzMnpNMzIgMzZoNHY0SDRWMzZ6bS04IDBoNHY0SDRWMzZ6bTQtNGg0djRINFYzMnpNMTYgMzJoNHY0SDRWMzJ6bTQgMGg0djRINFYzMnpNMTYgMzZoNHY0SDRWMzZ6bTgtOGg0djRINFYyOHptNC00aDR2NEg0VjI0ek0yNCA4aDR2NEg0Vjh6bTQgMGg0djRINFY4ek0yNCAxMmg0djRINFYxMnpNMjQgNGg0djRINFY0em00IDRoNHY0SDRWNHptMC00aDR2NEg0VjB6bTQgMGg0djRINFY4em0wIDE2aDR2NEg0VjI0em00LTRoNHY0SDRWMjB6TTggMTZoNHY0SDRWMTZ6bTQgNGg0djRINFYyMHptLTggMGg0djRINFYyMHptNCA0aDR2NEg0VjI0ek00IDE2aDR2NEg0VjE2em0wLTRoNHY0SDRWMTJ6TTAgMTZoNHY0HDBWMTZ6bTQgMGg0djRINFYxNnpNOCA4aDR2NEg0Vjh6bS00IDRoNHY0SDRWOHptNCA0aDR2NEg0VjEyek0wIDEyaDR2NEg0VjEyek0yNCAzMmY0djRINFYzMnpNMzIgMjRoNHY0SDRWMjR6TTAgMjRoNHY0HDBWMjR6TTggMzJoNHY0SDRWMzJ6TTI0IDE2aDR2NEg0VjE2em00IDRoNHY0SDRWMjB6bS00IDRoNHY0SDRWMTZ6bTQgMGg0djRINFYxNnpNMjQgMjBoNHY0SDRWMjB6bTQgMGg0djRINFYyMHptMCA4aDR2NEg0VjI4em00IDRoNHY0SDRWMjh6bTAtNGg0djRINFYyNHptNCAwMGg0djRINFYyNHptLTggOGg0djRINFY4em00IDRoNHY0SDRWMTJ6Ii8+PC9nPjwvZz48L3N2Zz4=');
+               background-image: radial-gradient(circle at top, var(--crema), var(--ocre)), url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MCIgaGVpZ2h0PSI0MCIgdmlld0JveD0iMCAwIDQwIDQwIj48ZyBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiM4ZDQuYjIwIiBmaWxsLW9wYWNpdHk9IjAuMDUiPjxwYXRoIGQ9Ik0wIDBoNHY0SDBWMHptNCA0aDR2NEg0VjR6TTAgNGg0djRIMFY0em00IDBoNHY0SDRWMHptOCA4aDR2NEg4Vjh6bTQgNGg0djRINFYxMnpNOCA4aDR2NEg4Vjh6bTQgMGg0djRINFY8em0xNiAxNmY0djRINFYyNHptNCA0aDR2NEg0VjI4em0wLTRoNHY0SDRWMjR6bTQgMGg0djRINFYyNHptLTggOGg0djRINFY8em00IDRoNHY0SDRWMTJ6TTAgOGg0djRINFY4em00IDRoNHY0SDRWMTJ6TTAgMTJoNHY0SDBWMTJ6bTQgMGg0djRINFYxMnpNMjQgMGg0djRINFYwem00IDRoNHY0SDRWNHptLSA0aDR2NEg0VjB6bTQgMGg0djRINFY8em0wIDE2aDR2NEg4VjI0em00IDRoNHY0SDRWMjh6bTAtNGg0djRINFYyNHptNCAwMGg0djRINFYyNHptLTggOGg0djRINFY8em00IDRoNHY0SDRWMTJ6TTAgMjRoNHY0SDBWMjR6bTQgNGg0djRINFYyOHptMCA0aDR2NEg0VjI0em00IDBoNHY0SDRWMjR6TTAgMjh6bTQgMGg0djRINFYyOHptMCA0aDR2NEg0VjMyem00IDBoNHY0SDRWMzJ6bTggOGg0djRINFY8em00IDRoNHY0SDRWMTJ6TTggMjRoNHY0SDRWMjR6bTQgNGg0djRINFYyOHptMCA0aDR2NEg0VjI0em00IDBoNHY0SDRWMjR6TTggMjh6bTQgMGg0djRINFYyOHptMCA0aDR2NEg0VjMyem00IDBoNHY0SDRWMzJ6TTI0IDE2aDR2NEg0VjE2em00IDRoNHY0SDRWMjB6bS00IDRoNHY0SDRWMTZ6bTQgMGg0djRINFYxNnpNMjQgMjBoNHY0SDRWMjB6bTQgMGg0djRINFYyOHptMCA4aDR2NEg0VjI4em00IDRoNHY0SDRWMjh6bTAtNGg0djRINFYyNHptNCAwMGg0djRINFYyNHptLTggOGg0djRINFY8em00IDRoNHY0SDRWMTJ6TTMyIDBoNHY0SDRWMzJ6bTQgMGg0djRINFY0em0wLTRoNHY0SDRWMHptNCAwMGg0djRINFY8em0wIDE2aDR2NEg0VjI0em00IDRoNHY0SDRWMjh6bTAtNGg0djRINFYyNHptNCAwMGg0djRINFYyNHptLTggOGg0djRINFY8em00IDRoNHY0SDRWMTJ6TTMyIDE2aDR2NEg0VjE2em00IDRoNHY0SDRWMjB6bS00IDRoNHY0SDRWMTZ6bTQgMGg0djRINFYxNnpNMzIgMjBoNHY0SDRWMjB6bTQgMGg0djRINFYyMHptMCA4aDR2NEg0VjI4em00IDRoNHY0SDRWMjh6bTAtNGg0djRINFYyNHptNCAwMGg0djRINFYyNHptLTggOGg0djRINFY8em00IDRoNHY0SDRWMTJ6TTAgMzJoNHY0HDBWMzJ6bTQgMGg0djRINFYzMnpNMCAzNmg0djRINFYzNnpNMzIgMzJoNHY0SDRWMzJ6bTQgMGg0djRINFYzMnpNMzIgMzZoNHY0SDRWMzZ6bS04IDBoNHY0SDRWMzZ6bTQtNGg0djRINFYzMnpNMTYgMzJoNHY0SDRWMzJ6bTQgMGg0djRINFYzMnpNMTYgMzZoNHY0SDRWMzZ6bTgtOGg0djRINFYyOHptNC00aDR2NEg0VjI0ek0yNCA4aDR2NEg0Vjh6bTQgMGg0djRINFY8ek0yNCAxMmg0djRINFYxMnpNMjQgNGg0djRINFY0em00IDRoNHY0SDRWNHptMC00aDR2NEg0VjB6bTQgMGg0djRINFY8em0wIDE2aDR2NEg0VjI0em00LTRoNHY0SDRWMjB6TTggMTZoNHY0SDRWMTZ6bTQgNGg0djRINFYyMHptLTggMGg0djRINFYyMHptNCA0aDR2NEg0VjI0ek00IDE2aDR2NEg0VjE2em0wLTRoNHY0SDRWMTJ6TTAgMTZoNHY0HDBWMTZ6bTQgMGg0djRINFYxNnpNOCA4aDR2NEg0Vjh6bS00IDRoNHY0SDRWOHptNCA0aDR2NEg0VjEyek0wIDEyaDR2NEg0VjEyek0yNCAzMmY0djRINFYzMnpNMzIgMjRoNHY0SDRWMjR6TTAgMjRoNHY0HDBWMjR6TTggMzJoNHY0SDRWMzJ6TTI0IDE2aDR2NEg0VjE2em00IDRoNHY0SDRWMjB6bS00IDRoNHY0SDRWMTZ6bTQgMGg0djRINFYxNnpNMjQgMjBoNHY0SDRWMjB6bTQgMGg0djRINFYyMHptMCA4aDR2NEg0VjI4em00IDRoNHY0SDRWMjh6bTAtNGg0djRINFYyNHptNCAwMGg0djRINFYyNHptLTggOGg0djRINFY8em00IDRoNHY0SDRWMTJ6Ii8+PC9nPjwvZz48L3N2Zz4=');
                color: var(--texto); min-height: 100vh; }
         
         header { padding: 40px 20px; text-align: center; background: linear-gradient(135deg, var(--cafe-oscuro), var(--cafe-claro)); color: #fff; box-shadow: 0 4px 15px rgba(0,0,0,0.3); border-bottom: 5px solid var(--verde); position: relative; }
@@ -17,14 +17,12 @@
         
         .container { max-width: 1000px; margin: 50px auto; display: grid; grid-template-columns: 1.3fr 0.7fr; gap: 30px; padding: 20px; position: relative; }
         
-        /* Paneles Decorados estilo Canva */
         .panel { 
             background: #fff; padding: 40px; border-radius: 30px; 
             box-shadow: 0 20px 50px rgba(84, 45, 12, 0.15); 
             border: 4px solid #fff; position: relative; transition: 0.3s;
         }
         .panel:hover { border-color: var(--ocre); }
-        /* Título decorado dentro del panel */
         .panel h2 { 
             color: var(--cafe-oscuro); font-size: 2rem; margin-bottom: 25px; 
             background: var(--crema); display: inline-block; padding: 5px 20px; border-radius: 15px; border: 2px solid var(--ocre);
@@ -52,14 +50,21 @@
             border: 1px solid var(--ocre); transition: 0.3s;
         }
         .item-pedido:hover { background: #fff; transform: scale(1.02); }
-        .item-pedido span:first-child { font-weight: 600; color: var(--cafe-oscuro); }
-        .item-pedido span:last-child { color: var(--cafe-claro); font-weight: bold; }
         
+        /* BOTÓN ELIMINAR */
+        .btn-eliminar {
+            background: var(--rojo); color: white; border: none; 
+            border-radius: 50%; width: 25px; height: 25px; 
+            cursor: pointer; font-weight: bold; margin-left: 10px;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 0.8rem; transition: 0.2s;
+        }
+        .btn-eliminar:hover { background: #c0392b; transform: scale(1.2); }
+
         .total-box { 
             text-align: center; background: linear-gradient(135deg, var(--cafe-oscuro), #3e1f08); 
             color: white; padding: 30px; border-radius: 20px; position: relative; overflow: hidden;
         }
-        /* Brillo decorativo */
         .total-box::after { content: ''; position: absolute; top: -50%; left: -50%; width: 200%; height: 200%; background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 70%); }
         
         .total-box h3 { font-size: 1.5rem; margin-bottom: 10px; position: relative; z-index: 1; }
@@ -75,7 +80,6 @@
         
         .metodos-pago { font-size: 0.9rem; text-align: center; margin-top: 15px; color: #666; border-top: 1px solid #eee; padding-top: 10px; }
         .metodos-pago img { height: 25px; vertical-align: middle; margin: 0 5px; }
-
         .decoracion-extra { position: fixed; font-size: 5rem; opacity: 0.03; z-index: -1; }
     </style>
 </head>
@@ -122,8 +126,7 @@
             
             <button class="btn-add" onclick="agregarAlPedido()">+ Añadir a mi Lista</button>
 
-            <div class="lista-pedidos" id="lista">
-                </div>
+            <div class="lista-pedidos" id="lista"></div>
         </div>
 
         <div class="panel" style="position: sticky; top: 20px; height: fit-content;">
@@ -144,94 +147,89 @@
     </div>
 
     <script>
-        // Array para guardar los items del carrito
         let carrito = [];
-        // Variable para el total general
         let totalGeneral = 0;
 
-        // Función para añadir un producto a la lista
         function agregarAlPedido() {
-            // Obtener los elementos HTML
             const selectProducto = document.getElementById('producto');
             const inputCantidad = document.getElementById('cantidad');
-            const listaHtml = document.getElementById('lista');
-            const totalHtml = document.getElementById('total');
-
-            // Obtener los datos del producto seleccionado
+            
             const opcionSeleccionada = selectProducto.options[selectProducto.selectedIndex];
             const nombreProducto = opcionSeleccionada.getAttribute('data-name');
             const precioProducto = parseInt(opcionSeleccionada.value);
             const cantidad = parseInt(inputCantidad.value);
 
-            // Validar cantidad
             if (cantidad < 1 || isNaN(cantidad)) {
                 alert("Por favor, ingresa una cantidad válida.");
                 return;
             }
 
-            // Calcular subtotal de este item
             const subtotalItem = precioProducto * cantidad;
 
-            // Actualizar el total general
-            totalGeneral += subtotalItem;
-
-            // Guardar en el array del carrito
+            // Guardar en el carrito con un ID único para poder borrarlo
             carrito.push({
+                id: Date.now(),
                 nombre: nombreProducto,
                 cantidad: cantidad,
                 subtotal: subtotalItem
             });
 
-            // Crear el HTML para mostrar en la lista
-            const nuevoItemHtml = `
-                <div class="item-pedido">
-                    <span>${cantidad}x ${nombreProducto}</span>
-                    <span>$${subtotalItem.toLocaleString('es-CO')}</span>
-                </div>
-            `;
-
-            // Añadir el item a la lista en el HTML
-            listaHtml.innerHTML += nuevoItemHtml;
-
-            // Actualizar el total en el HTML con formato de moneda
-            totalHtml.innerText = '$' + totalGeneral.toLocaleString('es-CO') + ' COP';
-
-            // Resetear cantidad a 1 para el siguiente producto
             inputCantidad.value = 1;
+            actualizarInterfaz();
         }
 
-        // Función para formatear el mensaje y abrir WhatsApp
+        function eliminarDelPedido(id) {
+            // Filtramos el carrito para quitar el item con ese ID
+            carrito = carrito.filter(item => item.id !== id);
+            actualizarInterfaz();
+        }
+
+        function actualizarInterfaz() {
+            const listaHtml = document.getElementById('lista');
+            const totalHtml = document.getElementById('total');
+            
+            // Limpiar lista actual
+            listaHtml.innerHTML = "";
+            totalGeneral = 0;
+
+            // Re-dibujar todo el carrito
+            carrito.forEach(item => {
+                totalGeneral += item.subtotal;
+                const nuevoItemHtml = `
+                    <div class="item-pedido">
+                        <div>
+                            <span style="font-weight:600; color:var(--cafe-oscuro);">${item.cantidad}x ${item.nombre}</span>
+                        </div>
+                        <div style="display:flex; align-items:center;">
+                            <span style="color:var(--cafe-claro); font-weight:bold;">$${item.subtotal.toLocaleString('es-CO')}</span>
+                            <button class="btn-eliminar" onclick="eliminarDelPedido(${item.id})">X</button>
+                        </div>
+                    </div>
+                `;
+                listaHtml.innerHTML += nuevoItemHtml;
+            });
+
+            totalHtml.innerText = '$' + totalGeneral.toLocaleString('es-CO') + ' COP';
+        }
+
         function enviarPedido() {
-            // Validar si el carrito está vacío
             if (carrito.length === 0) {
                 alert("🛒 Tu carrito está vacío. ¡Agrega deliciosos productos primero!");
                 return;
             }
 
-            // Crear el inicio del mensaje
             let mensajeWhatsApp = "¡Hola Panadería Retoño! 🌾🥖 Quiero hacer el siguiente pedido:%0A%0A";
-
-            // Recorrer el carrito y añadir cada producto al mensaje
             carrito.forEach((item, index) => {
                 mensajeWhatsApp += `*${index + 1}.* ${item.cantidad}x ${item.nombre} - _($${item.subtotal.toLocaleString('es-CO')})_%0A`;
             });
 
-            // Añadir el total final y métodos de pago
             mensajeWhatsApp += `%0A-------------------------`;
             mensajeWhatsApp += `%0A💰 *TOTAL A PAGAR: $${totalGeneral.toLocaleString('es-CO')} COP*`;
             mensajeWhatsApp += `%0A-------------------------`;
             mensajeWhatsApp += `%0A📍 _Por favor confírmenme disponibilidad y costo de domicilio. ¡Gracias!_`;
 
-            // Reemplazar espacios por %20 para la URL (aunque encodeURIComponent es mejor)
-            // mensajeWhatsApp = mensajeWhatsApp.replace(/ /g, "%20");
-
-            // Número de teléfono de la panadería (sin el signo +)
             const numeroTelefono = "3243994536";
-
-            // Crear la URL final de WhatsApp
             const urlFinal = `https://wa.me/${numeroTelefono}?text=${mensajeWhatsApp}`;
-
-            // Abrir la URL en una nueva pestaña
             window.open(urlFinal, '_blank');
         }
     </script>
