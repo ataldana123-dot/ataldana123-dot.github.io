@@ -84,6 +84,13 @@
         .btn-regresar:hover {
             transform: scale(1.05);
         }
+
+        /* --- PARCHE RESPONSIVE --- */
+        @media (max-width: 650px) {
+            .map-card { width: 95%; margin: 20px auto; padding: 15px; }
+            .map-container { height: 300px; }
+            nav a { margin: 0 5px; font-size: 0.8rem; }
+        }
     </style>
 </head>
 <body>
@@ -100,12 +107,13 @@
         <div class="map-card">
             <div class="info-ubicacion">
                 <h2>Barrio Camilo Torres</h2>
-                <p>Popayán, Cauca – ¡Te esperamos con el pan más fresco!</p>
+                <p>Cra 28 #4-16, Popayán, Cauca</p>
+                <p><strong>¡Te esperamos con el pan más fresco!</strong></p>
             </div>
 
             <div class="map-container">
                 <iframe 
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3986.115714041046!2d-76.6025096240212!3d2.463056097516027!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e300d82d0c21211%3A0x328786724607feb2!2sBarrio%20Camilo%20Torres%2C%20Popay%C3%A1n%2C%20Cauca!5e0!3m2!1ses!2sco!4v1712860000000!5m2!1ses!2sco" 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3986.090623661448!2d-76.62143092579122!3d2.4437299567117176!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e30030f0030030f%3A0x0!2zMsKwMjYnMzcuNCJOIDc2wrAzNycwNy45Ilc!5e0!3m2!1ses!2sco!4v1712966400000!5m2!1ses!2sco" 
                     allowfullscreen="" 
                     loading="lazy" 
                     referrerpolicy="no-referrer-when-downgrade">
