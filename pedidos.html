@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Realizar Pedido – Panadería Retoño</title>
     <style>
-        /* MISMOS ESTILOS BASE Y FONDO DE PANES.HTML */
+        /* ESTILOS BASE */
         :root { --cafe-oscuro: #5a2d0c; --cafe-claro: #8d4b20; --crema: #fff3e0; --dorado: #ffe082; --texto: #4a2c1a; --ocre: #e6caa8; --verde: #25D366; --rojo: #e74c3c; }
         body { margin: 0; font-family: 'Segoe UI', sans-serif; background-color: var(--crema); 
-               background-image: radial-gradient(circle at top, var(--crema), var(--ocre)), url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MCIgaGVpZ2h0PSI0MCIgdmlld0JveD0iMCAwIDQwIDQwIj48ZyBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiM4ZDQuYjIwIiBmaWxsLW9wYWNpdHk9IjAuMDUiPjxwYXRoIGQ9Ik0wIDBoNHY0SDBWMHptNCA0aDR2NEg0VjR6TTAgNGg0djRIMFY0em00IDBoNHY0SDRWMHptOCA4aDR2NEg4Vjh6bTQgNGg0djRINFYxMnpNOCA4aDR2NEg4Vjh6bTQgMGg0djRINFY8em0xNiAxNmY0djRINFYyNHptNCA0aDR2NEg0VjI4em0wLTRoNHY0SDRWMjR6bTQgMGg0djRINFYyNHptLTggOGg0djRINFY8em00IDRoNHY0SDRWMTJ6TTAgOGg0djRINFY4em00IDRoNHY0SDRWMTJ6TTAgMTJoNHY0SDBWMTJ6bTQgMGg0djRINFYxMnpNMjQgMGg0djRINFYwem00IDRoNHY0SDRWNHptLSA0aDR2NEg0VjB6bTQgMGg0djRINFY8em0wIDE2aDR2NEg4VjI0em00IDRoNHY0SDRWMjh6bTAtNGg0djRINFYyNHptNCAwMGg0djRINFYyNHptLTggOGg0djRINFY8em00IDRoNHY0SDRWMTJ6TTAgMjRoNHY0SDBWMjR6bTQgNGg0djRINFYyOHptMCA0aDR2NEg0VjI0em00IDBoNHY0SDRWMjR6TTAgMjh6bTQgMGg0djRINFYyOHptMCA0aDR2NEg0VjMyem00IDBoNHY0SDRWMzJ6bTggOGg0djRINFY8em00IDRoNHY0SDRWMTJ6TTggMjRoNHY0SDRWMjR6bTQgNGg0djRINFYyOHptMCA0aDR2NEg0VjI0em00IDBoNHY0SDRWMjR6TTggMjh6bTQgMGg0djRINFYyOHptMCA0aDR2NEg0VjMyem00IDBoNHY0SDRWMzJ6TTI0IDE2aDR2NEg0VjE2em00IDRoNHY0SDRWMjB6bS00IDRoNHY0SDRWMTZ6bTQgMGg0djRINFYxNnpNMjQgMjBoNHY0SDRWMjB6bTQgMGg0djRINFYyOHptMCA4aDR2NEg0VjI4em00IDRoNHY0SDRWMjh6bTAtNGg0djRINFYyNHptNCAwMGg0djRINFYyNHptLTggOGg0djRINFY8em00IDRoNHY0SDRWMTJ6TTMyIDBoNHY0SDRWMzJ6bTQgMGg0djRINFY0em0wLTRoNHY0SDRWMHptNCAwMGg0djRINFY8em0wIDE2aDR2NEg0VjI0em00IDRoNHY0SDRWMjh6bTAtNGg0djRINFYyNHptNCAwMGg0djRINFYyNHptLTggOGg0djRINFY8em00IDRoNHY0SDRWMTJ6TTMyIDE2aDR2NEg0VjE2em00IDRoNHY0SDRWMjB6bS00IDRoNHY0SDRWMTZ6bTQgMGg0djRINFYxNnpNMzIgMjBoNHY0SDRWMjB6bTQgMGg0djRINFYyMHptMCA4aDR2NEg0VjI4em00IDRoNHY0SDRWMjh6bTAtNGg0djRINFYyNHptNCAwMGg0djRINFYyNHptLTggOGg0djRINFY8em00IDRoNHY0SDRWMTJ6TTAgMzJoNHY0HDBWMzJ6bTQgMGg0djRINFYzMnpNMCAzNmg0djRINFYzNnpNMzIgMzJoNHY0SDRWMzJ6bTQgMGg0djRINFYzMnpNMzIgMzZoNHY0SDRWMzZ6bS04IDBoNHY0SDRWMzZ6bTQtNGg0djRINFYzMnpNMTYgMzJoNHY0SDRWMzJ6bTQgMGg0djRINFYzMnpNMTYgMzZoNHY0SDRWMzZ6bTgtOGg0djRINFYyOHptNC00aDR2NEg0VjI0ek0yNCA4aDR2NEg0Vjh6bTQgMGg0djRINFY8ek0yNCAxMmg0djRINFYxMnpNMjQgNGg0djRINFY0em00IDRoNHY0SDRWNHptMC00aDR2NEg0VjB6bTQgMGg0djRINFY8em0wIDE2aDR2NEg0VjI0em00LTRoNHY0SDRWMjB6TTggMTZoNHY0SDRWMTZ6bTQgNGg0djRINFYyMHptLTggMGg0djRINFYyMHptNCA0aDR2NEg0VjI0ek00IDE2aDR2NEg0VjE2em0wLTRoNHY0SDRWMTJ6TTAgMTZoNHY0HDBWMTZ6bTQgMGg0djRINFYxNnpNOCA4aDR2NEg0Vjh6bS00IDRoNHY0SDRWOHptNCA0aDR2NEg0VjEyek0wIDEyaDR2NEg0VjEyek0yNCAzMmY0djRINFYzMnpNMzIgMjRoNHY0SDRWMjR6TTAgMjRoNHY0HDBWMjR6TTggMzJoNHY0SDRWMzJ6TTI0IDE2aDR2NEg0VjE2em00IDRoNHY0SDRWMjB6bS00IDRoNHY0SDRWMTZ6bTQgMGg0djRINFYxNnpNMjQgMjBoNHY0SDRWMjB6bTQgMGg0djRINFYyMHptMCA4aDR2NEg0VjI4em00IDRoNHY0SDRWMjh6bTAtNGg0djRINFYyNHptNCAwMGg0djRINFYyNHptLTggOGg0djRINFY8em00IDRoNHY0SDRWMTJ6Ii8+PC9nPjwvZz48L3N2Zz4=');
+               background-image: radial-gradient(circle at top, var(--crema), var(--ocre)), url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MCIgaGVpZ2h0PSI0MCIgdmlld0JveD0iMCAwIDQwIDQwIj48ZyBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiM4ZDQuYjIwIiBmaWxsLW9wYWNpdHk9IjAuMDUiPjxwYXRoIGQ9Ik0wIDBoNHY0SDBWMHptNCA0aDR2NEg0VjR6TTAgNGg0djRIMFY0em00IDBoNHY0SDRWMHptOCA4aDR2NEg4Vjh6bTQgNGg0djRINFYxMnpNOCA4aDR2NEg4Vjh6bTQgMGg0djRINFY4em0xNiAxNmY0djRINFYyNHptNCA0aDR2NEg0VjI4em0wLTRoNHY0SDRWMjR6bTQgMGg0djRINFYyNHptLTggOGg0djRINFY8em00IDRoNHY0SDRWMTJ6TTAgOGg0djRINFY4em00IDRoNHY0SDRWMTJ6TTAgMTJoNHY0SDBWMTJ6bTQgMGg0djRINFYxMnpNMjQgMGg0djRINFYwem00IDRoNHY0SDRWNHptLSA0aDR2NEg0VjB6bTQgMGg0djRINFY8em0wIDE2aDR2NEg4VjI0em00IDRoNHY0SDRWMjh6bTAtNGg0djRINFYyNHptNCAwMGg0djRINFYyNHptLTggOGg0djRINFY8em00IDRoNHY0SDRWMTJ6TTAgMjRoNHY0SDBWMjR6bTQgNGg0djRINFYyOHptMCA0aDR2NEg0VjI0em00IDBoNHY0SDRWMjR6TTAgMjh6bTQgMGg0djRINFYyOHptMCA0aDR2NEg0VjMyem00IDBoNHY0SDRWMzJ6bTggOGg0djRINFY8em00IDRoNHY0SDRWMTJ6TTggMjRoNHY0SDRWMjR6bTQgNGg0djRINFYyOHptMCA0aDR2NEg0VjI0em00IDBoNHY0SDRWMjR6TTggMjh6bTQgMGg0djRINFYyOHptMCA0aDR2NEg0VjMyem00IDBoNHY0SDRWMzJ6TTI0IDE2aDR2NEg0VjE2em00IDRoNHY0SDRWMjB6bS00IDRoNHY0SDRWMTZ6bTQgMGg0djRINFYxNnpNMjQgMjBoNHY0SDRWMjB6bTQgMGg0djRINFYyOHptMCA4aDR2NEg0VjI4em00IDRoNHY0SDRWMjh6bTAtNGg0djRINFYyNHptNCAwMGg0djRINFYyNHptLTggOGg0djRINFY8em00IDRoNHY0SDRWMTJ6TTMyIDBoNHY0SDRWMzJ6bTQgMGg0djRINFY0em0wLTRoNHY0SDRWMHptNCAwMGg0djRINFY8em0wIDE2aDR2NEg0VjI0em00IDRoNHY0SDRWMjh6bTAtNGg0djRINFYyNHptNCAwMGg0djRINFYyNHptLTggOGg0djRINFY8em00IDRoNHY0SDRWMTJ6TTMyIDE2aDR2NEg0VjE2em00IDRoNHY0SDRWMjB6bS00IDRoNHY0SDRWMTZ6bTQgMGg0djRINFYxNnpNMzIgMjBoNHY0SDRWMjB6bTQgMGg0djRINFYyMHptMCA4aDR2NEg0VjI4em00IDRoNHY0SDRWMjh6bTAtNGg0djRINFYyNHptNCAwMGg0djRINFYyNHptLTggOGg0djRINFY8em00IDRoNHY0SDRWMTJ6TTAgMzJoNHY0HDBWMzJ6bTQgMGg0djRINFYzMnpNMCAzNmg0djRINFYzNnpNMzIgMzJoNHY0SDRWMzJ6bTQgMGg0djRINFYzMnpNMzIgMzZoNHY0SDRWMzZ6bS04IDBoNHY0SDRWMzZ6bTQtNGg0djRINFYzMnpNMTYgMzJoNHY0SDRWMzJ6bTQgMGg0djRINFYzMnpNMTYgMzZoNHY0SDRWMzZ6bTgtOGg0djRINFYyOHptNC00aDR2NEg0VjI0ek0yNCA4aDR2NEg0Vjh6bTQgMGg0djRINFY8ek0yNCAxMmg0djRINFYxMnpNMjQgNGg0djRINFY0em00IDRoNHY0SDRWNHptMC00aDR2NEg0VjB6bTQgMGg0djRINFY8em0wIDE2aDR2NEg0VjI0em00LTRoNHY0SDRWMjB6TTggMTZoNHY0SDRWMTZ6bTQgNGg0djRINFYyMHptLTggMGg0djRINFYyMHptNCA0aDR2NEg0VjI0ek00IDE2aDR2NEg0VjE2em0wLTRoNHY0SDRWMTJ6TTAgMTZoNHY0HDBWMTZ6bTQgMGg0djRINFYxNnpNOCA4aDR2NEg0Vjh6bS00IDRoNHY0SDRWOHptNCA0aDR2NEg0VjEyek0wIDEyaDR2NEg0VjEyek0yNCAzMmY0djRINFYzMnpNMzIgMjRoNHY0SDRWMjR6TTAgMjRoNHY0HDBWMjR6TTggMzJoNHY0SDRWMzJ6TTI0IDE2aDR2NEg0VjE2em00IDRoNHY0SDRWMjB6bS00IDRoNHY0SDRWMTZ6bTQgMGg0djRINFYxNnpNMjQgMjBoNHY0SDRWMjB6bTQgMGg0djRINFYyMHptMCA4aDR2NEg0VjI4em00IDRoNHY0SDRWMjh6bTAtNGg0djRINFYyNHptNCAwMGg0djRINFYyNHptLTggOGg0djRINFY8em00IDRoNHY0SDRWMTJ6Ii8+PC9nPjwvZz48L3N2Zz4=');
                color: var(--texto); min-height: 100vh; }
         
         header { padding: 40px 20px; text-align: center; background: linear-gradient(135deg, var(--cafe-oscuro), var(--cafe-claro)); color: #fff; box-shadow: 0 4px 15px rgba(0,0,0,0.3); border-bottom: 5px solid var(--verde); position: relative; }
@@ -16,77 +16,69 @@
         nav { margin-top: 25px; } nav a { margin: 0 18px; color: var(--dorado); text-decoration: none; font-weight: 700; text-transform: uppercase; font-size: 1rem; }
         
         .container { max-width: 1000px; margin: 50px auto; display: grid; grid-template-columns: 1.3fr 0.7fr; gap: 30px; padding: 20px; position: relative; }
+        .panel { background: #fff; padding: 40px; border-radius: 30px; box-shadow: 0 20px 50px rgba(84, 45, 12, 0.15); border: 4px solid #fff; position: relative; transition: 0.3s; }
+        .panel h2 { color: var(--cafe-oscuro); font-size: 2rem; margin-bottom: 25px; background: var(--crema); display: inline-block; padding: 5px 20px; border-radius: 15px; border: 2px solid var(--ocre); }
         
-        .panel { 
-            background: #fff; padding: 40px; border-radius: 30px; 
-            box-shadow: 0 20px 50px rgba(84, 45, 12, 0.15); 
-            border: 4px solid #fff; position: relative; transition: 0.3s;
-        }
-        .panel:hover { border-color: var(--ocre); }
-        .panel h2 { 
-            color: var(--cafe-oscuro); font-size: 2rem; margin-bottom: 25px; 
-            background: var(--crema); display: inline-block; padding: 5px 20px; border-radius: 15px; border: 2px solid var(--ocre);
-        }
+        select, input { width: 100%; padding: 15px; margin: 15px 0; border-radius: 15px; border: 2px solid #eee; font-size: 1.1rem; box-sizing: border-box; transition: 0.3s; }
+        .btn-add { background: linear-gradient(135deg, var(--cafe-claro), var(--cafe-oscuro)); color: white; border: none; padding: 18px; width: 100%; border-radius: 15px; cursor: pointer; font-weight: bold; font-size: 1.2rem; transition: 0.3s; box-shadow: 0 5px 15px rgba(0,0,0,0.2); text-transform: uppercase; }
         
-        select, input { 
-            width: 100%; padding: 15px; margin: 15px 0; border-radius: 15px; 
-            border: 2px solid #eee; font-size: 1.1rem; box-sizing: border-box; 
-            transition: 0.3s;
-        }
-        select:focus, input:focus { border-color: var(--cafe-claro); outline: none; box-shadow: 0 0 10px rgba(141, 75, 32, 0.2); }
-        
-        .btn-add { 
-            background: linear-gradient(135deg, var(--cafe-claro), var(--cafe-oscuro)); 
-            color: white; border: none; padding: 18px; width: 100%; border-radius: 15px; 
-            cursor: pointer; font-weight: bold; font-size: 1.2rem; transition: 0.3s; 
-            box-shadow: 0 5px 15px rgba(0,0,0,0.2); text-transform: uppercase; letter-spacing: 1px;
-        }
-        .btn-add:hover { transform: translateY(-3px); box-shadow: 0 8px 20px rgba(0,0,0,0.3); }
-        
-        .lista-pedidos { margin-top: 30px; border-top: 2px dashed #eee; padding-top: 20px; }
-        .item-pedido { 
-            display: flex; justify-content: space-between; align-items: center; 
-            background: var(--crema); padding: 15px; border-radius: 10px; margin-bottom: 10px; 
-            border: 1px solid var(--ocre); transition: 0.3s;
-        }
-        .item-pedido:hover { background: #fff; transform: scale(1.02); }
-        
-        /* BOTÓN ELIMINAR */
-        .btn-eliminar {
-            background: var(--rojo); color: white; border: none; 
-            border-radius: 50%; width: 25px; height: 25px; 
-            cursor: pointer; font-weight: bold; margin-left: 10px;
-            display: flex; align-items: center; justify-content: center;
-            font-size: 0.8rem; transition: 0.2s;
-        }
-        .btn-eliminar:hover { background: #c0392b; transform: scale(1.2); }
+        .item-pedido { display: flex; justify-content: space-between; align-items: center; background: var(--crema); padding: 15px; border-radius: 10px; margin-bottom: 10px; border: 1px solid var(--ocre); }
+        .btn-eliminar { background: var(--rojo); color: white; border: none; border-radius: 50%; width: 25px; height: 25px; cursor: pointer; font-weight: bold; margin-left: 10px; font-size: 0.8rem; }
 
-        .total-box { 
-            text-align: center; background: linear-gradient(135deg, var(--cafe-oscuro), #3e1f08); 
-            color: white; padding: 30px; border-radius: 20px; position: relative; overflow: hidden;
+        .total-box { text-align: center; background: linear-gradient(135deg, var(--cafe-oscuro), #3e1f08); color: white; padding: 30px; border-radius: 20px; position: relative; overflow: hidden; }
+        .total-amount { font-size: 3rem; color: var(--dorado); font-weight: bold; position: relative; z-index: 1; }
+        
+        .btn-whatsapp { display: block; text-align: center; background: linear-gradient(135deg, var(--verde), #128C7E); color: white; text-decoration: none; padding: 20px; border-radius: 15px; font-weight: bold; font-size: 1.3rem; margin-top: 25px; transition: 0.3s; box-shadow: 0 10px 20px rgba(37, 211, 102, 0.3); }
+
+        /* ESTILOS DEL MODAL (VENTANA DE ADVERTENCIA) */
+        .modal-overlay {
+            display: none; /* Oculto por defecto */
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0, 0, 0, 0.6); /* Oscurece el fondo */
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+            backdrop-filter: blur(3px); /* Efecto de desenfoque opcional */
         }
-        .total-box::after { content: ''; position: absolute; top: -50%; left: -50%; width: 200%; height: 200%; background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 70%); }
-        
-        .total-box h3 { font-size: 1.5rem; margin-bottom: 10px; position: relative; z-index: 1; }
-        .total-amount { font-size: 3rem; color: var(--dorado); font-weight: bold; position: relative; z-index: 1; text-shadow: 0 2px 10px rgba(0,0,0,0.3); }
-        
-        .btn-whatsapp { 
-            display: block; text-align: center; background: linear-gradient(135deg, var(--verde), #128C7E); 
-            color: white; text-decoration: none; padding: 20px; border-radius: 15px; 
-            font-weight: bold; font-size: 1.3rem; margin-top: 25px; transition: 0.3s; 
-            box-shadow: 0 10px 20px rgba(37, 211, 102, 0.3); text-transform: uppercase;
+        .modal-content {
+            background: #fff;
+            padding: 40px;
+            border-radius: 25px;
+            max-width: 400px;
+            text-align: center;
+            position: relative;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+            border: 5px solid var(--ocre);
         }
-        .btn-whatsapp:hover { transform: translateY(-5px) scale(1.03); box-shadow: 0 15px 30px rgba(37, 211, 102, 0.5); }
-        
-        .metodos-pago { font-size: 0.9rem; text-align: center; margin-top: 15px; color: #666; border-top: 1px solid #eee; padding-top: 10px; }
-        .metodos-pago img { height: 25px; vertical-align: middle; margin: 0 5px; }
-        .decoracion-extra { position: fixed; font-size: 5rem; opacity: 0.03; z-index: -1; }
+        .btn-cerrar-modal {
+            position: absolute;
+            top: 15px; right: 15px;
+            background: var(--cafe-oscuro);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 30px; height: 30px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        .modal-text {
+            color: var(--cafe-oscuro);
+            font-size: 1.2rem;
+            line-height: 1.5;
+            font-weight: 600;
+        }
     </style>
 </head>
 <body>
-    <div class="decoracion-extra" style="top: 20%; left: 3%;">🛍️</div>
-    <div class="decoracion-extra" style="bottom: 10%; right: 3%;">💰</div>
-    <div class="decoracion-extra" style="top: 50%; right: 10%;">📝</div>
+    <div id="modalError" class="modal-overlay">
+        <div class="modal-content">
+            <button class="btn-cerrar-modal" onclick="cerrarModal()">X</button>
+            <p class="modal-text">
+                ⚠️ Lo sentimos, No podemos procesar tu pedido, porque no tienes articulos seleccionados en tu lista ⚠️
+            </p>
+        </div>
+    </div>
 
     <header>
         <h1>🌾 Panadería Retoño</h1>
@@ -96,9 +88,6 @@
     <div class="container">
         <div class="panel">
             <h2>🛍️ Arma tu Carrito</h2>
-            <p style="margin-top:-15px; color: #777; font-size:0.9rem;">Selecciona productos de todas las secciones.</p>
-            
-            <label>1. Selecciona un producto:</label>
             <select id="producto">
                 <optgroup label="🍞 Panes">
                     <option value="500" data-name="Pan barra pequeño">Pan barra pequeño – $500</option>
@@ -120,12 +109,8 @@
                     <option value="5500" data-name="Queso Redondo">Queso Redondo – $5.500</option>
                 </optgroup>
             </select>
-            
-            <label>2. Cantidad:</label>
             <input type="number" id="cantidad" value="1" min="1">
-            
             <button class="btn-add" onclick="agregarAlPedido()">+ Añadir a mi Lista</button>
-
             <div class="lista-pedidos" id="lista"></div>
         </div>
 
@@ -134,15 +119,9 @@
                 <h3>Total de tu Pedido</h3>
                 <div class="total-amount" id="total">$0 COP</div>
             </div>
-            
             <a id="wa-link" class="btn-whatsapp" href="#" onclick="enviarPedido()">
                 ✅ Enviar por WhatsApp
             </a>
-            
-            <div class="metodos-pago">
-                Paga en efectivo al recibir o por transferencia:<br>
-                <img src="https://upload.wikimedia.org/wikipedia/commons/8/8b/Nequi_Logo.png" alt="Nequi"> Nequi
-            </div>
         </div>
     </div>
 
@@ -153,7 +132,6 @@
         function agregarAlPedido() {
             const selectProducto = document.getElementById('producto');
             const inputCantidad = document.getElementById('cantidad');
-            
             const opcionSeleccionada = selectProducto.options[selectProducto.selectedIndex];
             const nombreProducto = opcionSeleccionada.getAttribute('data-name');
             const precioProducto = parseInt(opcionSeleccionada.value);
@@ -164,14 +142,11 @@
                 return;
             }
 
-            const subtotalItem = precioProducto * cantidad;
-
-            // Guardar en el carrito con un ID único para poder borrarlo
             carrito.push({
                 id: Date.now(),
                 nombre: nombreProducto,
                 cantidad: cantidad,
-                subtotal: subtotalItem
+                subtotal: precioProducto * cantidad
             });
 
             inputCantidad.value = 1;
@@ -179,7 +154,6 @@
         }
 
         function eliminarDelPedido(id) {
-            // Filtramos el carrito para quitar el item con ese ID
             carrito = carrito.filter(item => item.id !== id);
             actualizarInterfaz();
         }
@@ -187,50 +161,42 @@
         function actualizarInterfaz() {
             const listaHtml = document.getElementById('lista');
             const totalHtml = document.getElementById('total');
-            
-            // Limpiar lista actual
             listaHtml.innerHTML = "";
             totalGeneral = 0;
 
-            // Re-dibujar todo el carrito
             carrito.forEach(item => {
                 totalGeneral += item.subtotal;
-                const nuevoItemHtml = `
+                listaHtml.innerHTML += `
                     <div class="item-pedido">
-                        <div>
-                            <span style="font-weight:600; color:var(--cafe-oscuro);">${item.cantidad}x ${item.nombre}</span>
-                        </div>
+                        <div><span>${item.cantidad}x ${item.nombre}</span></div>
                         <div style="display:flex; align-items:center;">
                             <span style="color:var(--cafe-claro); font-weight:bold;">$${item.subtotal.toLocaleString('es-CO')}</span>
                             <button class="btn-eliminar" onclick="eliminarDelPedido(${item.id})">X</button>
                         </div>
-                    </div>
-                `;
-                listaHtml.innerHTML += nuevoItemHtml;
+                    </div>`;
             });
-
             totalHtml.innerText = '$' + totalGeneral.toLocaleString('es-CO') + ' COP';
         }
 
         function enviarPedido() {
             if (carrito.length === 0) {
-                alert("🛒 Tu carrito está vacío. ¡Agrega deliciosos productos primero!");
+                abrirModal(); // MOSTRAR ADVERTENCIA SI ESTÁ VACÍO
                 return;
             }
-
-            let mensajeWhatsApp = "¡Hola Panadería Retoño! 🌾🥖 Quiero hacer el siguiente pedido:%0A%0A";
+            let mensaje = "¡Hola Panadería Retoño! 🌾🥖 Quiero hacer el siguiente pedido:%0A%0A";
             carrito.forEach((item, index) => {
-                mensajeWhatsApp += `*${index + 1}.* ${item.cantidad}x ${item.nombre} - _($${item.subtotal.toLocaleString('es-CO')})_%0A`;
+                mensaje += `*${index + 1}.* ${item.cantidad}x ${item.nombre} - _($${item.subtotal.toLocaleString('es-CO')})_%0A`;
             });
+            mensaje += `%0A💰 *TOTAL: $${totalGeneral.toLocaleString('es-CO')} COP*`;
+            window.open(`https://wa.me/3243994536?text=${mensaje}`, '_blank');
+        }
 
-            mensajeWhatsApp += `%0A-------------------------`;
-            mensajeWhatsApp += `%0A💰 *TOTAL A PAGAR: $${totalGeneral.toLocaleString('es-CO')} COP*`;
-            mensajeWhatsApp += `%0A-------------------------`;
-            mensajeWhatsApp += `%0A📍 _Por favor confírmenme disponibilidad y costo de domicilio. ¡Gracias!_`;
-
-            const numeroTelefono = "3243994536";
-            const urlFinal = `https://wa.me/${numeroTelefono}?text=${mensajeWhatsApp}`;
-            window.open(urlFinal, '_blank');
+        // FUNCIONES DEL MODAL
+        function abrirModal() {
+            document.getElementById('modalError').style.display = 'flex';
+        }
+        function cerrarModal() {
+            document.getElementById('modalError').style.display = 'none';
         }
     </script>
 </body>
